@@ -1,0 +1,169 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+
+body {
+  font-family: 'work Sans', sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+    /* background-color: red; */
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+    /* background-color: blue; */
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+    /* background-color: yellow; */
+  }
+}
+
+/*------------------------------------- Header styling -------------------------------------*/
+
+
+.header {
+  padding: 20px;
+}
+
+.header>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 60px;
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links .icon {
+  display: flex;
+  justify-content: flex-end;
+  width: 30px;
+  flex-flow: row wrap;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 1.5px;
+  width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition-duration: 0.3s;
+}
+
+.header .links .icon span:last-child {
+  height: 2.5px;
+}
+
+.header .links ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0px;
+  top: calc(100% + 15px);
+  min-width: 200px;
+  display: none;
+  z-index: 1;
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+.header .links ul::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 10px solid #f6f6f6;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+}
+
+.header .links li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #333;
+  transition-duration: 0.3s;
+}
+
+.header .links li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.header .links li a:hover {
+  padding-left: 25px;
+}
+
+
+/*------------------------------------- Landing styling -------------------------------------*/
+
+.landing {
+  background-image: url(../assets/mountain.webp);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+
+.landing .intro-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+}
+
+.landing .intro-text h1 {
+  margin: 0px;
+  color: var(--main-color);
+  font-size: 50px;
+}
+
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
