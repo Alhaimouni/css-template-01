@@ -334,6 +334,7 @@ body {
 
 .portfolio .portfolio-content .card {
   background-color: white;
+  border-left: 3px solid var(--main-color);
 }
 
 .portfolio .portfolio-content .card .info {
@@ -399,9 +400,9 @@ body {
   content: "";
   position: absolute;
   width: 120px;
-  height: 200px;
-  border-left: 80px solid var(--main-color);
-  border-bottom: 80px solid var(--main-color);
+  height: 300px;
+  border-left: 100px solid var(--main-color);
+  border-bottom: 100px solid var(--main-color);
   z-index: -1;
 }
 
@@ -458,5 +459,69 @@ body {
 
   .about-content .image::after {
     display: none;
+  }
+}
+
+
+/*------------------------------------- Contact styling -------------------------------------*/
+
+
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #f6f6f6;
+}
+
+.contact .container>h2 {
+  color: #859198;
+}
+
+.contact .contact-content {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+
+.contact .contact-content .label {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.contact .contact-content .link {
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.contact .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+  align-items: center;
+}
+
+.contact .social i {
+  margin-left: 10px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.contact .social i:hover {
+  color: #10cab7;
+}
+
+@media (max-width: 767px) {
+  .contact .contact-content .label {
+    font-size: 25px;
+  }
+
+  .contact .contact-content .link {
+    font-size: 25px;
   }
 }
