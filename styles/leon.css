@@ -14,6 +14,7 @@
 
 body {
   font-family: 'work Sans', sans-serif;
+  position: relative;
 }
 
 .container {
@@ -172,7 +173,7 @@ body {
 /*------------------------------------- Landing styling -------------------------------------*/
 
 .landing {
-  background-image: url(../assets/mountain.webp);
+  background-image: url(../assets/pexels-photo-355770.jpeg);
   background-size: cover;
   height: calc(100vh - 64px);
   display: flex;
@@ -321,10 +322,6 @@ body {
   background-color: #f6f6f6;
 }
 
-.portfolio .container>h2 {
-  color: #859198;
-}
-
 .portfolio .portfolio-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -379,7 +376,7 @@ body {
 .about-content .image img {
   position: relative;
   width: 250px;
-  height: 375px;
+  height: 250px;
   z-index: 1;
   max-width: 100%;
 }
@@ -389,7 +386,7 @@ body {
   position: absolute;
   background-color: #EBECED;
   width: 100px;
-  height: calc(100% + 80px);
+  height: 350px;
   left: -40px;
   top: -50px;
 }
@@ -400,7 +397,7 @@ body {
   content: "";
   position: absolute;
   width: 120px;
-  height: 300px;
+  height: 140px;
   border-left: 100px solid var(--main-color);
   border-bottom: 100px solid var(--main-color);
   z-index: -1;
@@ -472,10 +469,6 @@ body {
   background-color: #f6f6f6;
 }
 
-.contact .container>h2 {
-  color: #859198;
-}
-
 .contact .contact-content {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -524,4 +517,47 @@ body {
   .contact .contact-content .link {
     font-size: 25px;
   }
+}
+
+
+/*------------------------------------- Footer styling -------------------------------------*/
+
+.footer {
+  height: 100px;
+  background-color: #10cab7;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .content {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer .content p:last-child span {
+  color: white;
+}
+
+.scroll {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  bottom: 110px;
+  right: 25px;
+}
+
+.scroll:hover {
+  box-shadow: 1px 1px 2px black;
 }
