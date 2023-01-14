@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
